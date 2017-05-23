@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-
+import commonModule from './commonModule';
 
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
 
-          <h2>Welcome to React</h2>
-
-
+          <h2>Hello to React</h2>
+           <commonModule/>
       </div>
     );
   }
