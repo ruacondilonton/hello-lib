@@ -2,7 +2,7 @@
   "name": "libhello",
   "version": "0.1.0",
   "private": true,
-  "main":"index.js",
+  "main":"lib/AppLib.js",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
