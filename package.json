@@ -22,7 +22,7 @@
   },
   "scripts": {
   "transpile": "node_modules/.bin/babel ./src/App.js --preset babel-preset-es2015 --out-file lib/AppLib.js",
-    "transpile2": "node_modules/.bin/babel ./src/commonModule.js --preset babel-preset-es2015 --out-file lib/commonModule.js",
+    "transpile2": "node_modules/.bin/babel ./src/commonModule.js --preset babel-preset-es2015 --out-file lib/CommonModule.js",
   "start": "react-scripts start",
     "build": "webpack --progress --colors --p",
     "test": "react-scripts test --env=jsdom",

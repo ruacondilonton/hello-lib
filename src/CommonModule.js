@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 
 
-export default class commonModule extends Component {
+export default class CommonModule extends Component {
     render() {
         return (
             <div className="map-wrapper">

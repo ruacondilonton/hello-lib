@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import commonModule from './commonModule';
+import CommonModule from './CommonModule.js';
 
 class App extends Component {
   render() {
@@ -7,7 +7,7 @@ class App extends Component {
       <div>
 
           <h2>Hello to React</h2>
-           <commonModule/>
+           <CommonModule />
       </div>
     );
   }
