@@ -19,35 +19,43 @@ export default class CommonModule extends Component {
 
 
       httpGet() {
-        return new Promise(function (resolve, reject) {
-            let url = 'https://mapfinder-staging.herokuapp.com/mapfinder/postcode?postcode=30&sport=baseball&orderby=dis';
-            console.log('url');
-            console.log(url);
-            const options = {
-                timeout: 12000,
-                headers: {
-                    'Authorization': "Basic ZGV2OmRldjIwMTY=",
-                    "X_API_KEY": "XrVL2DyqsA3hIF3oIfbQU7bAF7EtfRSH1ln6RL22",
+          return new Promise(function (resolve, reject) {
+              // let url = 'https://mapfinder-staging.herokuapp.com/mapfinder/postcode?postcode=30&sport=baseball&orderby=dis';
+              //
+              // console.log('url');
+              // console.log(url);
+              // const options = {
+              //     headers: {
+              //         'Content-Type': 'application/json',
+              //         'Accept': 'application/json',
+              //         'Authorization':"Basic ZGV2OmRldjIwMTY=",
+              //         'x-api-key': "XrVL2DyqsA3hIF3oIfbQU7bAF7EtfRSH1ln6RL22",
+              //         'Access-Control-Allow-Origin': '*',
+              //         'Access-Control-Allow-Headers': '*',
+              //     }
+              // };
 
-                }
-            };
-            request.get(  url ,options, function (error, response, body) {
 
-                if (!error && response.statusCode == 200) {
-                    if (body) {
-                        console.log('data',JSON.parse(body));
-                        return resolve(JSON.parse(body));
-                    }
-                    return resolve();
-                } else {
-                    return reject(error || body);
-                }
-            });
-        });
-    }
+              let url = 'http://128.199.90.210:8083/team/a0Rp0000004AIsVEAW';
 
+
+              fetch(url)
+                  .then(function (response) {
+                      if (response.status >= 400) {
+                          throw new Error("Bad response from server");
+                      }
+                      return response.json();
+                  })
+                  .then(function (data) {
+                      console.log("=====data:", data);
+
+                  });
+
+          });
+      }
 
 } ;
+
 const css = `
 
   .map-wrapper {
