@@ -38,7 +38,8 @@ export default class CommonModule extends Component {
 
               let url = 'http://128.199.90.210:8083/team/a0Rp0000004AIsVEAW';
 
-
+               console.log('url');
+               console.log(url);
               fetch(url)
                   .then(function (response) {
                       if (response.status >= 400) {
